@@ -11,6 +11,11 @@
 		84F720E11E7EDC6300236ABC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F720E01E7EDC6300236ABC /* main.m */; };
 		84F720E31E7EDC6300236ABC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F720E21E7EDC6300236ABC /* Assets.xcassets */; };
 		84F720E61E7EDC6300236ABC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F720E41E7EDC6300236ABC /* MainMenu.xib */; };
+		84F7210C1E7EDCD800236ABC /* INAppStoreWindowSwizzling.c in Sources */ = {isa = PBXBuildFile; fileRef = 84F721011E7EDCD800236ABC /* INAppStoreWindowSwizzling.c */; };
+		84F7210D1E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F721041E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.m */; };
+		84F7210E1E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F721061E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.m */; };
+		84F7210F1E7EDCD800236ABC /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F721081E7EDCD800236ABC /* INAppStoreWindow.m */; };
+		84F721101E7EDCD800236ABC /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F7210B1E7EDCD800236ABC /* INWindowButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,17 @@
 		84F720E21E7EDC6300236ABC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F720E51E7EDC6300236ABC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		84F720E71E7EDC6300236ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F721011E7EDCD800236ABC /* INAppStoreWindowSwizzling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = INAppStoreWindowSwizzling.c; sourceTree = "<group>"; };
+		84F721021E7EDCD800236ABC /* INAppStoreWindowSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindowSwizzling.h; sourceTree = "<group>"; };
+		84F721031E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "INWindowBackgroundView+CoreUIRendering.h"; sourceTree = "<group>"; };
+		84F721041E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "INWindowBackgroundView+CoreUIRendering.m"; sourceTree = "<group>"; };
+		84F721051E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocument+INAppStoreWindowFixes.h"; sourceTree = "<group>"; };
+		84F721061E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocument+INAppStoreWindowFixes.m"; sourceTree = "<group>"; };
+		84F721071E7EDCD800236ABC /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		84F721081E7EDCD800236ABC /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		84F721091E7EDCD800236ABC /* INAppStoreWindowCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindowCompatibility.h; sourceTree = "<group>"; };
+		84F7210A1E7EDCD800236ABC /* INWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWindowButton.h; sourceTree = "<group>"; };
+		84F7210B1E7EDCD800236ABC /* INWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWindowButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +69,7 @@
 		84F720DB1E7EDC6300236ABC /* AppStoreWinDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84F720FF1E7EDCD800236ABC /* INAppStoreWindow */,
 				84F720DC1E7EDC6300236ABC /* AppDelegate.h */,
 				84F720DD1E7EDC6300236ABC /* AppDelegate.m */,
 				84F720E21E7EDC6300236ABC /* Assets.xcassets */,
@@ -69,6 +86,32 @@
 				84F720E01E7EDC6300236ABC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F720FF1E7EDCD800236ABC /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				84F721001E7EDCD800236ABC /* Extensions */,
+				84F721071E7EDCD800236ABC /* INAppStoreWindow.h */,
+				84F721081E7EDCD800236ABC /* INAppStoreWindow.m */,
+				84F721091E7EDCD800236ABC /* INAppStoreWindowCompatibility.h */,
+				84F7210A1E7EDCD800236ABC /* INWindowButton.h */,
+				84F7210B1E7EDCD800236ABC /* INWindowButton.m */,
+			);
+			path = INAppStoreWindow;
+			sourceTree = "<group>";
+		};
+		84F721001E7EDCD800236ABC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84F721011E7EDCD800236ABC /* INAppStoreWindowSwizzling.c */,
+				84F721021E7EDCD800236ABC /* INAppStoreWindowSwizzling.h */,
+				84F721031E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.h */,
+				84F721041E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.m */,
+				84F721051E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.h */,
+				84F721061E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F7210F1E7EDCD800236ABC /* INAppStoreWindow.m in Sources */,
+				84F7210E1E7EDCD800236ABC /* NSDocument+INAppStoreWindowFixes.m in Sources */,
 				84F720E11E7EDC6300236ABC /* main.m in Sources */,
+				84F721101E7EDCD800236ABC /* INWindowButton.m in Sources */,
+				84F7210D1E7EDCD800236ABC /* INWindowBackgroundView+CoreUIRendering.m in Sources */,
+				84F7210C1E7EDCD800236ABC /* INAppStoreWindowSwizzling.c in Sources */,
 				84F720DE1E7EDC6300236ABC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,10 +289,13 @@
 		84F720EB1E7EDC6300236ABC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppStoreWinDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartisian.AppStoreWinDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -253,10 +304,13 @@
 		84F720EC1E7EDC6300236ABC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AppStoreWinDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartisian.AppStoreWinDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
